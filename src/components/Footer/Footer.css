@@ -1,0 +1,106 @@
+/* Footer.css */
+
+/* Container for the entire footer */
+.Footer-container {
+    position: relative;
+    text-align: center;
+    padding: 2rem 0;
+    background-color: gray #363d42;
+    color: white;
+
+}
+
+/* Style for the horizontal rule */
+.Footer-container > hr {
+    border: 1px solid var(--lightgray);
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+/* Flexbox for the footer section */
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin-top: 1rem;
+}
+
+/* Container for the social media icons */
+.social-links {
+    display: flex;
+    gap: 2rem; /* Reduced gap to make the icons closer */
+}
+
+/* Styling for the images inside the links */
+.social-links a {
+    display: inline-block; /* Ensures images are treated as inline-blocks */
+    width: 3rem;  /* Fixed width for icons */
+    height: 3rem; /* Fixed height for icons */
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+/* Prevent stretching and maintain aspect ratio */
+.social-links img {
+    width: 100%;  /* Image will fit within the parent container */
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: contain; /* Prevents distortion */
+}
+
+/* Hover effect for icons */
+.social-links img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Specific adjustments for the second image (Logo) */
+.social-links > img:nth-child(2) {
+    width: 4rem; /* Adjust width to keep it in proportion */
+    height: 4rem; /* Adjust height to keep it in proportion */
+}
+
+.blur-f-1 {
+    bottom: 0;
+    right: 15%;
+    width: 26rem;
+    height: 12rem;
+    filter: blur(200px);
+    background: red;
+}
+
+.blur-f-2 {
+    bottom: 0;
+    left: 15%;
+    width: 26rem;
+    height: 12rem;
+    filter: blur(200px);
+    background: pink;
+}
+#logo1{
+    height: 4rem;
+    width: 10rem;
+}
+#map {
+    height: auto; /* Allow the height to be dynamic depending on the image */
+    width: 100%;  /* Make it take up the full width of its container */
+    max-width: 600px;  /* Limit the maximum width */
+    margin-top: 0rem; /* Add space between the logo and the map */
+    position: relative;
+    margin-left: 29rem;
+    display: flex;
+    justify-content: center; /* Center the map inside the container */
+}
+
+#map img {
+    width: 4rem;  /* Make sure the map image scales properly */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: contain; /* Ensure the map fits within the container */
+}
+
+@media screen and (max-width: 768px){
+    #map{
+        margin-left: 0;
+    }
+}

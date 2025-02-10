@@ -1,0 +1,37 @@
+/* Reel.css */
+
+/* Container for the video, keeping the aspect ratio intact */
+.video-container {
+    position: relative;
+    padding-top: 35%; /* Adjust aspect ratio (smaller container height) */
+    height: 0;
+    overflow: hidden;
+    transition: transform 0.5s ease-out; /* Smooth transition for scaling */
+    width: 100%;
+    max-width: 700px; /* Limit the max width */
+    margin: 0 auto; /* Center the video */
+  }
+  
+  /* The video itself is absolutely positioned within the container */
+  .responsive-video {
+    position: absolute;
+    top: 0;
+    left: 7rem;
+    width: 70%;
+    height: 70%;
+    object-fit: cover; /* Cover the container with the video */
+    transition: transform 0.5s ease-out; /* Smooth transition for resizing */
+    transform: rotate(180deg); /* Ensure no rotation */
+  }
+
+
+  
+  /* Adjustments for smaller screens */
+  @media (max-width: 600px) {
+    .video-container {
+        display: none;
+      max-width: 100%;
+      padding-top: 56.25%; /* Revert to 16:9 aspect ratio on smaller screens */
+    }
+  }
+  
