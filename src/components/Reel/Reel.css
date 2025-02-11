@@ -1,37 +1,62 @@
-/* Reel.css */
+.reel-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
 
-/* Container for the video, keeping the aspect ratio intact */
-.video-container {
-    position: relative;
-    padding-top: 35%; /* Adjust aspect ratio (smaller container height) */
-    height: 0;
-    overflow: hidden;
-    transition: transform 0.5s ease-out; /* Smooth transition for scaling */
-    width: 100%;
-    max-width: 700px; /* Limit the max width */
-    margin: 0 auto; /* Center the video */
-  }
-  
-  /* The video itself is absolutely positioned within the container */
-  .responsive-video {
-    position: absolute;
-    top: 0;
-    left: 7rem;
-    width: 70%;
-    height: 70%;
-    object-fit: cover; /* Cover the container with the video */
-    transition: transform 0.5s ease-out; /* Smooth transition for resizing */
-    transform: rotate(180deg); /* Ensure no rotation */
-  }
+/* Video Styling */
+.reel-video {
+  width: 85%;
+  height: 100vh;
+  max-width: 900px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
 
+/* Play Button */
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.7);
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 10;
+}
 
-  
-  /* Adjustments for smaller screens */
-  @media (max-width: 600px) {
-    .video-container {
-        display: none;
-      max-width: 100%;
-      padding-top: 56.25%; /* Revert to 16:9 aspect ratio on smaller screens */
-    }
+/* Hover effect */
+.play-button:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Full-screen effect for mobile */
+@media (max-width: 768px) {
+  .reel-video {
+    width: 75%;
+    height: 80vh;
+    object-fit: cover;
+    border-radius: 0;
+    margin-top: -12rem;
   }
-  
+  .play-button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin-top: -5rem;
+  }
+}
+

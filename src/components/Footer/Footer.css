@@ -89,7 +89,7 @@
     margin-top: 0rem; /* Add space between the logo and the map */
     position: relative;
     margin-left: 29rem;
-    display: flex;
+    display: none;
     justify-content: center; /* Center the map inside the container */
 }
 
@@ -98,9 +98,18 @@
     height: auto; /* Maintain the aspect ratio */
     object-fit: contain; /* Ensure the map fits within the container */
 }
+.Ad{
+    margin-top: 1.4rem;
+    text-align: center;
+}
 
 @media screen and (max-width: 768px){
     #map{
         margin-left: 0;
+    }
+    .Ad{
+        font-size: small;
+        text-align: center;
+        margin-top: 1rem;
     }
 }

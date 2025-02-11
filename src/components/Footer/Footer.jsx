@@ -22,8 +22,13 @@ const Footer = () => {
           </a>
 
           {/* Logo Image */}
-          <a href="/" aria-label="Home" id='logo1'>
-            <img src={Logo} alt="Logo" />
+          <a
+            href="https://maps.app.goo.gl/zTa73vXD9ZA2g4Wy9"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <img src={Map} alt="Map" />
           </a>
 
           {/* Phone Contact Link */}
@@ -34,17 +39,12 @@ const Footer = () => {
       </div>
 
       <div className="Logo-f" id='map'>
-      <a
-            href="https://maps.app.goo.gl/zTa73vXD9ZA2g4Wy9"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-          >
-            <img src={Map} alt="Map" />
+      <a href="/" aria-label="Home" id='logo1'>
+            <img src={Logo} alt="Logo" />
           </a>
           
       </div>
-      <div>
+      <div className='Ad'>
       <span>© 2025 Black Panther Gym. All rights reserved.</span>
       </div>
       <div className="blur blur-f-1"></div>

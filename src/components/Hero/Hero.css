@@ -172,7 +172,7 @@
         display: flex;            /* Flexbox to align buttons horizontally */
         gap: 1rem;                /* Space between buttons */
         position: absolute;
-        top: 31.5rem;                /* Keep the same top positioning */
+        top: 31.1rem;                /* Keep the same top positioning */
         left: 30%;
         transform: translateY(100%); /* Keep buttons horizontally centered */
         z-index: 2;

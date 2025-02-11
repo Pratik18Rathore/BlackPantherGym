@@ -13,9 +13,9 @@ function App() {
           <Hero/>
           <Programs/>
           <Reasons/>
+          <Reel />
           <Plans/>
           <Testimonials/>
-           
           <Footer/>
     </div>
   );
